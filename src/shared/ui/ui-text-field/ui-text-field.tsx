@@ -1,0 +1,35 @@
+import clsx from 'clsx'
+import { forwardRef, InputHTMLAttributes, useId } from 'react'
+import styles from './ui-text-field.module.scss'
+
+interface IUiTextField {
+	label?: string
+	className?: string
+	error?: string
+	inputProps?: InputHTMLAttributes<HTMLInputElement>
+}
+
+export const UiTextField = forwardRef<HTMLInputElement, IUiTextField>(
+	({ label, className, inputProps, error }: IUiTextField, ref) => {
+		const id = useId()
+		return (
+			<div className={clsx(className, styles.textField)}>
+				{label && (
+					<label
+						htmlFor={id}
+						className={styles.label}
+					>
+						{label}
+					</label>
+				)}
+				<input
+					{...inputProps}
+					id={id}
+					ref={ref}
+					className={clsx(inputProps?.className, styles.inputs)}
+				/>
+				{error && <div className={styles.error}>{error}</div>}
+			</div>
+		)
+	}
+)
