@@ -1,4 +1,23 @@
+.textField {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.inputs {
+	max-width: 300px;
+	width: 100%;
+	padding: 5px;
+	border-radius: 5px;
+	border: 1px solid black;
+}
+
+.inputs:focus {
+	border: 1px solid white;
+	outline: 1px solid rgb(228, 103, 2);
+}
+
 .error {
-	size: 2rem;
+	font-size: 1rem;
 	color: red;
 }

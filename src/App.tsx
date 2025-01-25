@@ -1,3 +1,4 @@
+import { UiButton } from './shared/ui/ui-button'
 import { UiTextField } from './shared/ui/ui-text-field'
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
 				label="Login"
 				error="try"
 			/>
+			<UiButton>s</UiButton>
 		</div>
 	)
 }
