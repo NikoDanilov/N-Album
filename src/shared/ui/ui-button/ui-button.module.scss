@@ -5,7 +5,7 @@
 	font-size: 14px;
 	line-height: 1;
 	color: white;
-	background: rgb(228, 103, 2);
+	background: var(--green);
 	border: 1px solid black;
 	border-radius: 5px;
 	height: 30px;
@@ -15,9 +15,9 @@
 }
 
 .button:hover {
-	background: rgb(238, 137, 54);
+	background: var(--dark-green);
 }
 
 .button:focus {
-	outline: 1px solid rgb(238, 137, 54);
+	outline: 1px solid var(--charcoal-gray);
 }

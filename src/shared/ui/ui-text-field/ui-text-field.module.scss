@@ -9,12 +9,12 @@
 	width: 100%;
 	padding: 5px;
 	border-radius: 5px;
-	border: 1px solid black;
+	border: 1px solid var(--charcoal-gray);
 }
 
 .inputs:focus {
 	border: 1px solid white;
-	outline: 1px solid rgb(228, 103, 2);
+	outline: 1px solid var(--charcoal-gray);
 }
 
 .error {
