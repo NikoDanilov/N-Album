@@ -4,7 +4,7 @@ import { UiButton } from './ui-button'
 import styles from './ui-button.module.scss'
 
 describe('UiButton', () => {
-	test('renders button and button-class', () => {
+	test('должен отрендерить кнопку и класс', () => {
 		render(<UiButton>Кнопка</UiButton>)
 
 		const buttonElement = screen.getByText(/Кнопка/i)

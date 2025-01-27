@@ -2,7 +2,7 @@ import clsx from 'clsx'
 import { forwardRef, InputHTMLAttributes, useId } from 'react'
 import styles from './ui-text-field.module.scss'
 
-export type UiTextFieldType = {
+export type UiTextFieldType = InputHTMLAttributes<HTMLInputElement> & {
 	label?: string
 	className?: string
 	error?: string

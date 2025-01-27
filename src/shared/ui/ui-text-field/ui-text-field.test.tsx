@@ -4,7 +4,7 @@ import { UiTextField } from './ui-text-field'
 import styles from './ui-text-field.module.scss'
 
 describe('UiTextField', () => {
-	test('renders the label and input correctly', () => {
+	test('должен отрендерить инпут с лаблом', () => {
 		render(<UiTextField label="Username" />)
 
 		// Проверка, что лейбл отображается
@@ -16,7 +16,7 @@ describe('UiTextField', () => {
 		expect(inputElement).toBeInTheDocument()
 	})
 
-	test('renders error with class', () => {
+	test('должен отрендерить ошибку с классом', () => {
 		render(
 			<UiTextField
 				label="Username"
