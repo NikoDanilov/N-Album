@@ -1,3 +1,5 @@
+@use './vars';
+
 * {
 	padding: 0px;
 	margin: 0px;
@@ -106,14 +108,4 @@ label {
 
 legend {
 	display: block;
-}
-
-:root {
-	--white: #ffffff; // Белый
-	--light-gray: #f5f5f5; // Светло-серый фон
-	--dark-gray: #2c2c2c; // Темно-серый для основного текста
-	--charcoal-gray: #333333; // Угольный для элементов UI
-	--green: #4caf50; // Зеленый для кнопок и акцентов
-	--dark-green: #388e3c; // Темно-зеленый для hover состояний
-	--black: #000000; // Черный для текста
 }

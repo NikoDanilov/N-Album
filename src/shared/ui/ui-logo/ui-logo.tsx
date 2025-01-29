@@ -6,7 +6,7 @@ export const UiLogo = () => {
 			className={styles.logo}
 			data-testid="ui-logo"
 		>
-			NAuto
+			N-Album
 		</div>
 	)
 }
