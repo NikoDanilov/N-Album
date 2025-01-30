@@ -1,13 +1,54 @@
+import { BrowserRouter, Outlet, Route, Routes } from 'react-router'
 import { Header } from '../widgets/header'
 import { Layout } from './layout'
+import { router } from './routes/router'
 
-function App() {
+export function App() {
 	return (
-		<Layout
-			header={<Header />}
-			main={<div>content</div>}
-		/>
+		<BrowserRouter>
+			<Routes>
+				<Route
+					path="/"
+					element={
+						<Layout
+							header={<Header />}
+							main={<Outlet />}
+						/>
+					}
+				>
+					{router.map((route) => (
+						<Route
+							element={route.element}
+							key={route.id}
+							path={route.path}
+						/>
+					))}
+				</Route>
+			</Routes>
+		</BrowserRouter>
 	)
 }
 
-export default App
+export function UnWrappedApp() {
+	return (
+		<Routes>
+			<Route
+				path="/"
+				element={
+					<Layout
+						header={<Header />}
+						main={<Outlet />}
+					/>
+				}
+			>
+				{router.map((route) => (
+					<Route
+						element={route.element}
+						key={route.id}
+						path={route.path}
+					/>
+				))}
+			</Route>
+		</Routes>
+	)
+}

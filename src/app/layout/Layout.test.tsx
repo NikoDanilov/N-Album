@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react'
+import { MemoryRouter } from 'react-router'
 import { describe, expect, test } from 'vitest'
 import { Header } from '../../widgets/header'
 import { Layout } from './Layout'
@@ -6,10 +7,12 @@ import { Layout } from './Layout'
 describe('Layout', () => {
 	test('render Layout and children-components', () => {
 		render(
-			<Layout
-				header={<Header />}
-				main={<div>content</div>}
-			/>
+			<MemoryRouter>
+				<Layout
+					header={<Header />}
+					main={<div>content</div>}
+				/>
+			</MemoryRouter>
 		)
 
 		const layoutElement = screen.getByTestId('layout')
