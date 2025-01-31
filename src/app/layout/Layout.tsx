@@ -8,7 +8,10 @@ export interface ILayout {
 
 export const Layout: FC<ILayout> = ({ header, main }) => {
 	return (
-		<div data-testid="layout">
+		<div
+			data-testid="layout"
+			className={styles.body}
+		>
 			{header}
 			<main className={styles.main}>{main}</main>
 		</div>
